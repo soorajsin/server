@@ -4,7 +4,7 @@ require("./DB/Connection");
 const router = require("./Routers/route");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
-const port = 4000;
+const port = 4000 || process.env.PORT;
 
 
 app.get("/", (req, res) => {
