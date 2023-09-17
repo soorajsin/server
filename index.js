@@ -14,7 +14,11 @@ app.get("/", (req, res) => {
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors());
+app.use(cors({
+          origin:["https://client-xi-flax.vercel.app"],
+          methods:["POST", "GET"],
+          credentials:true
+}));
 app.use(router);
 
 
